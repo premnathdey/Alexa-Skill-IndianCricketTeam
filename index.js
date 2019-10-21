@@ -107,8 +107,8 @@ const AMAZON_StopIntent_Handler =  {
 
         return responseBuilder
             .speak(say)
-            .withShouldEndSession(true)
-            .getResponse();
+            .withShouldEndSession(flase)
+  
     },
 };
 
