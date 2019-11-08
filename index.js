@@ -58,7 +58,7 @@ const AMAZON_CancelIntent_Handler =  {
         return responseBuilder
             .speak(say)
             .withShouldEndSession(true)
-            .getResponse();
+            .getResponse(true);
     },
 };
 
@@ -88,7 +88,6 @@ const AMAZON_HelpIntent_Handler =  {
         return responseBuilder
             .speak(say)
             .reprompt('try again, ' + say)
-            .getResponse();
     },
 };
 
@@ -107,8 +106,8 @@ const AMAZON_StopIntent_Handler =  {
 
         return responseBuilder
             .speak(say)
-            .withShouldEndSession(true)
-            .getResponse();
+            .withShouldEndSession(flase)
+  
     },
 };
 
